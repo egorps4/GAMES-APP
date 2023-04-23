@@ -1,0 +1,29 @@
+.footer {
+    grid-area: footer;
+
+    background: #41295a;  
+    background: linear-gradient(to bottom, #2F0743, #41295a);
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 60px;
+
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: #963199;
+            }
+        }
+    }
+
+    &__author {
+    }
+
+    &__api {
+    }
+}
+.container {
+}

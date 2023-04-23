@@ -1,0 +1,44 @@
+.header {
+    grid-area: header;
+
+    background: #41295a;  
+    background: linear-gradient(to bottom, #2F0743, #41295a);
+
+
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+
+    &__logo {
+        font-size: 28px;
+        @include for-phone {
+            font-size: 22px;
+        }
+    }
+
+    &__form {
+    }
+
+    &__search {
+        max-width: 220px;
+        height: 35px;
+
+        padding: 0 0 0 10px;
+
+        border-radius: 10px;
+
+        background-color: white;
+
+        color: #000;
+
+        @include for-phone {
+            width: 150px;
+        }
+    }
+}
+
+
