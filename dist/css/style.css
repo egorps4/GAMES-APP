@@ -94,9 +94,9 @@ ul, ul li {
   }
 }
 .header__search {
-  max-width: 220px;
+  max-width: 210px;
   height: 35px;
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 10px;
   border-radius: 10px;
   background-color: white;
   color: #000;
@@ -161,12 +161,71 @@ body {
 
 .mainblock {
   position: relative;
-  padding: 50px 0 50px 0px;
+}
+
+.filters {
+  padding: 50px 0 50px 0;
+}
+.filters__list {
+  position: relative;
+  display: flex;
+  gap: 40px;
+}
+.filters__reset {
+  cursor: pointer;
+}
+.filters__item {
+  position: relative;
+}
+.filters__item::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -18px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #6E18C0;
+  border-right: 2px solid #6E18C0;
+  transform: rotate(135deg);
+}
+.filters__item-text {
+  cursor: pointer;
+}
+
+.submenu {
+  position: absolute;
+  top: 25px;
+  z-index: 1;
+  visibility: hidden;
+  width: max-content;
+  padding: 10px 20px 10px 30px;
+  background-color: #6E18C0;
+}
+.submenu.open {
+  visibility: visible;
+}
+.submenu__item {
+  cursor: pointer;
+  width: max-content;
+  margin: 0 0 10px 0;
+  position: relative;
+}
+.submenu__item.active::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .cards__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   justify-items: center;
   justify-content: center;
   gap: 0px 20px;
@@ -215,6 +274,15 @@ body {
 }
 .cards__rating--red {
   border-color: #CC0033;
+}
+.cards__platform {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
 }
 .cards__description {
   padding: 10px 10px 0 10px;
